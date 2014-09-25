@@ -2,21 +2,19 @@
 #include<stdlib.h>
 #include<string.h>
 int parseForHello(char);
-int next_state(int , char , int , char *);
+int nextState(int , char , int , char *);
 
-int main(){
-	char* string="gffthghelloopopk";  //initial hard coding input
-	int i=0;
-	while(1){
-		char c=string[i];
+int main()
+{
+	while(1)
+    {
+		char c=getchar();
 		int helloFound= parseForHello(c);
 
 		if(helloFound){
 			printf("\nFound\n");
 			break;
 		}
-
-		i++;
 	}
 		return 0;
 }
@@ -31,7 +29,7 @@ Function to return 1/0 for presence of 'hello' in string
     int success_state= strlen(string);
     static int state=0;
     char *ptr=&string[0];
-    state=next_state(state, c, success_state, ptr);
+    state=nextState(state, c, success_state, ptr);
     if(state==success_state)
     {
         state=0;
@@ -41,7 +39,7 @@ Function to return 1/0 for presence of 'hello' in string
         return 0;
 }
 
-int next_state(int state, char c, int success_state, char *ptr)
+int nextState(int state, char c, int success_state, char *ptr)
 /*
 Function to return next state of FSM based on current state and input
 */
