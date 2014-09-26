@@ -1,6 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<main.h>
+#include<test.h>
+
 int parseForHello(char);
 int nextState(int , char , int , char *);
 

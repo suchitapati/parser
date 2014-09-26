@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include "test.h"
+#include "main.h"
 
 #define BUF_SIZE 100
 
