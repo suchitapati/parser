@@ -1,4 +1,4 @@
-parser
+parser: Grampower
 =========
 
 Parser is a C source simple state machine parser.
